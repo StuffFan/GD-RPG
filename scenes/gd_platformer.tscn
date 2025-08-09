@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://pb3mi27ku7vl"]
+
+[sub_resource type="Resource" id="Resource_6qw28"]
+metadata/__load_path__ = "res://Icon4Right.png"
+
+[sub_resource type="Resource" id="Resource_1tohs"]
+metadata/__load_path__ = "res://CollisionShape2D.gd"
+
+[node name="GDmon Area1" type="Node2D"]
+
+[node name="Icon4 Set" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("Resource_6qw28")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+debug_color = Color(1.05888e-05, 0.692978, 0.882688, 0.419608)
+script = SubResource("Resource_1tohs")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0ximlqr81p7o"]
+
+[ext_resource type="Script" uid="uid://btloout57rhu2" path="res://coincounter2.gd" id="1_brot4"]
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_brot4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Coins : 0"

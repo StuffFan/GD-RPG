@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://0qtxlqhjkoj8"]
+
+[ext_resource type="FontFile" uid="uid://dga8b713735ae" path="res://icons/OXYGENE1.TTF" id="1_j87ng"]
+
+[node name="Label" type="Label"]
+offset_right = 574.0
+offset_bottom = 292.0
+theme_override_fonts/font = ExtResource("1_j87ng")
+text = "COINS: "

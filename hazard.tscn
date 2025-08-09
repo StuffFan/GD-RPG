@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckmpoe2ta6rof"]
+
+[ext_resource type="Script" uid="uid://b3t5hmv7mfmlg" path="res://hazard.gd" id="1_623qp"]
+[ext_resource type="Texture2D" uid="uid://daabvfqh4yu0l" path="res://icons/LEGO.png" id="1_ibfg1"]
+
+[node name="Node2D" type="Node2D"]
+visible = false
+script = ExtResource("1_623qp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Lego" type="Sprite2D" parent="Area2D"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_ibfg1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(-39.03, 73)
+scale = Vector2(1.85323, -1.26267)
+polygon = PackedVector2Array(1.6188, 68.1097, 21.0443, 77.6134, 41.0095, 68.9017, 40.4699, 46.7264, 22.6631, 30.095, 2.1584, 44.3505)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

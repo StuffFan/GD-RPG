@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=3 uid="uid://4jii7f1wexr"]
+
+[ext_resource type="Texture2D" uid="uid://ymyhmdtmleof" path="res://kenney_platformer-art-extended-tileset/PNG Sand/Spritesheet/sheet.png" id="1_3amf2"]
+[ext_resource type="Script" uid="uid://cp0ahjohsuipe" path="res://scenes/battle.gd" id="1_yr0dw"]
+[ext_resource type="PackedScene" uid="uid://b8iv8ewaqe1lb" path="res://Icon1E.tscn" id="2_j7fjb"]
+[ext_resource type="PackedScene" uid="uid://d1qfucndsqojp" path="res://superfighter.tscn" id="4_57rda"]
+[ext_resource type="PackedScene" uid="uid://ckmpoe2ta6rof" path="res://hazard.tscn" id="5_g2loa"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_krv1v"]
+texture = ExtResource("1_3amf2")
+texture_region_size = Vector2i(10, 10)
+7:0/size_in_atlas = Vector2i(7, 7)
+7:0/0 = 0
+14:0/size_in_atlas = Vector2i(7, 7)
+14:0/0 = 0
+21:0/size_in_atlas = Vector2i(7, 7)
+21:0/0 = 0
+28:0/size_in_atlas = Vector2i(7, 7)
+28:0/0 = 0
+35:0/size_in_atlas = Vector2i(7, 7)
+35:0/0 = 0
+0:7/size_in_atlas = Vector2i(7, 7)
+0:7/0 = 0
+7:7/size_in_atlas = Vector2i(7, 7)
+7:7/0 = 0
+14:7/size_in_atlas = Vector2i(7, 7)
+14:7/0 = 0
+21:7/size_in_atlas = Vector2i(7, 7)
+21:7/0 = 0
+28:7/size_in_atlas = Vector2i(7, 7)
+28:7/0 = 0
+28:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -34.75, 35, -35, 34.75, 35.25, -34.75, 35.25)
+0:14/size_in_atlas = Vector2i(7, 7)
+0:14/0 = 0
+7:14/size_in_atlas = Vector2i(7, 7)
+7:14/0 = 0
+14:14/size_in_atlas = Vector2i(7, 7)
+14:14/0 = 0
+21:14/size_in_atlas = Vector2i(7, 7)
+21:14/0 = 0
+0:21/size_in_atlas = Vector2i(7, 7)
+0:21/0 = 0
+7:21/size_in_atlas = Vector2i(7, 7)
+7:21/0 = 0
+14:21/size_in_atlas = Vector2i(7, 4)
+14:21/0 = 0
+21:21/size_in_atlas = Vector2i(7, 7)
+21:21/0 = 0
+28:21/size_in_atlas = Vector2i(7, 7)
+28:21/0 = 0
+28:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -34.75, 35, -35, 34.75, 35.25, -34.75, 35.25)
+0:28/size_in_atlas = Vector2i(7, 7)
+0:28/0 = 0
+7:28/size_in_atlas = Vector2i(7, 7)
+7:28/0 = 0
+14:28/size_in_atlas = Vector2i(7, 7)
+14:28/0 = 0
+21:28/size_in_atlas = Vector2i(7, 7)
+21:28/0 = 0
+28:28/size_in_atlas = Vector2i(7, 7)
+28:28/0 = 0
+0:35/size_in_atlas = Vector2i(7, 7)
+0:35/0 = 0
+7:35/size_in_atlas = Vector2i(7, 7)
+7:35/0 = 0
+14:35/size_in_atlas = Vector2i(7, 7)
+14:35/0 = 0
+21:35/size_in_atlas = Vector2i(7, 7)
+21:35/0 = 0
+28:35/size_in_atlas = Vector2i(7, 4)
+28:35/0 = 0
+28:42/size_in_atlas = Vector2i(7, 4)
+28:42/0 = 0
+0:42/size_in_atlas = Vector2i(7, 7)
+0:42/0 = 0
+7:42/size_in_atlas = Vector2i(7, 7)
+7:42/0 = 0
+14:42/size_in_atlas = Vector2i(7, 7)
+14:42/0 = 0
+21:42/size_in_atlas = Vector2i(7, 7)
+21:42/0 = 0
+0:0/size_in_atlas = Vector2i(7, 4)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-34.75, -20.25, 35.125, -19.875, 35, -3.5, -34.75, -2.75)
+0:0/0/physics_layer_0/polygon_0/one_way = true
+28:14/size_in_atlas = Vector2i(7, 7)
+28:14/0 = 0
+28:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -34.75, 35, -35, 34.75, 35.25, -34.75, 35.25)
+
+[sub_resource type="TileSet" id="TileSet_duf7i"]
+tile_size = Vector2i(10, 10)
+physics_layer_0/collision_layer = 1
+sources/11 = SubResource("TileSetAtlasSource_krv1v")
+
+[node name="battle" type="Node2D"]
+rotation = -6.28319
+script = ExtResource("1_yr0dw")
+
+[node name="Icon1E" parent="." instance=ExtResource("2_j7fjb")]
+z_index = 1
+position = Vector2(1068, 549)
+scale = Vector2(0.8, 0.8)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(46, 578)
+tile_set = SubResource("TileSet_duf7i")
+format = 2
+layer_0/tile_data = PackedInt32Array(196618, 1835019, 14, 196625, 1835019, 14, 196632, 1835019, 14, 196639, 1835019, 14, 196646, 1835019, 14, 196653, 1835019, 14, 196660, 1835019, 14, 196667, 1835019, 14, 196674, 1835019, 14, 196681, 1835019, 14, 196688, 1835019, 14, 196695, 1835019, 14, 196702, 1835019, 14, -458721, 11, 0, 196709, 1835019, 7, 196611, 1835019, 21, -458679, 11, 0, -458700, 11, 0, -131020, 11, 7, -130999, 11, 7, -131041, 11, 7)
+
+[node name="Superfighter" parent="." instance=ExtResource("4_57rda")]
+z_index = 1
+position = Vector2(74, 553)
+scale = Vector2(0.4, 0.4)
+
+[node name="Node2D" parent="." instance=ExtResource("5_g2loa")]
+position = Vector2(697.998, 542.003)

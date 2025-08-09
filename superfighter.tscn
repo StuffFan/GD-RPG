@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1qfucndsqojp"]
+
+[ext_resource type="Script" uid="uid://llrjx5eugy2x" path="res://Superfighter.gd" id="1_vrh2y"]
+[ext_resource type="Texture2D" uid="uid://cttecqya6gj6" path="res://icons/icon_4.png" id="2_1ecxp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idqiq"]
+size = Vector2(130.463, 133.936)
+
+[node name="Superfighter" type="CharacterBody2D"]
+script = ExtResource("1_vrh2y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.499999, 0)
+shape = SubResource("RectangleShape2D_idqiq")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("2_1ecxp")
